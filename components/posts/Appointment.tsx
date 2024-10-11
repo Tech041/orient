@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import PostsPagination from "./PostsPagination";
 
 const invoices = [
   {
@@ -40,7 +41,7 @@ const invoices = [
     patient: "Tim Heckel",
 
     department: "Paediatrics",
-    date: "30/10/2024",
+    date: "30/6/2024",
     status: "chronic",
     bill: "$600",
   },
@@ -49,7 +50,7 @@ const invoices = [
     patient: "Howl web",
 
     department: "Urology",
-    date: "1/11/2024",
+    date: "1/7/2024",
     status: "terminal",
     bill: "$ 1000",
   },
@@ -58,7 +59,7 @@ const invoices = [
     patient: "Fred Hawk",
 
     department: "Psychiatry",
-    date: "12/11/2024",
+    date: "12/7/2024",
     status: "unstable",
     bill: "$ 600",
   },
@@ -67,7 +68,7 @@ const invoices = [
     patient: "Philip John",
 
     department: "Emergency",
-    date: "23/12/2024",
+    date: "23/7/2024",
     status: "stable",
     bill: "$ 500",
   },
@@ -111,13 +112,16 @@ const Appointment = () => {
             </TableRow>
           ))}
         </TableBody>
-        <TableFooter>
+        {/* <TableFooter>
           <TableRow className="relative">
             <TableCell colSpan={3}>Total</TableCell>
             <TableCell className="  absolute right-0 ">$4,500.00</TableCell>
           </TableRow>
-        </TableFooter>
+        </TableFooter> */}
       </Table>
+      <div className="">
+        <PostsPagination/>
+      </div>
     </div>
   );
 };

@@ -21,8 +21,8 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className=" h-screen mt-5">
-      <Command className="bg-secondary rounded-none">
+    <div className="  h-screen mt-5">
+      <Command className=" rounded-none">
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
@@ -33,11 +33,35 @@ const Sidebar = () => {
             </CommandItem>
             <CommandItem>
               <Newspaper className="mr-2 h-4 w-4" />
-              <Link href="/appointment">Appointments</Link>
+              <Link href="/patients">Patients</Link>
             </CommandItem>
             <CommandItem>
               <Folders className="mr-2 h-4 w-4" />
-              <Link href="#">Categories</Link>
+              <Link href="/activeDoctors">Doctors</Link>
+            </CommandItem>
+            <CommandItem>
+              <Folders className="mr-2 h-4 w-4" />
+              <Link href="/activePharmacists">Pharmacists</Link>
+            </CommandItem>
+            <CommandItem>
+              <Folders className="mr-2 h-4 w-4" />
+              <Link href="/activeNurses">Nurses</Link>
+            </CommandItem>
+            <CommandItem>
+              <Folders className="mr-2 h-4 w-4" />
+              <Link href="/expenditure">Expenditure</Link>
+            </CommandItem>
+            <CommandItem>
+              <Folders className="mr-2 h-4 w-4" />
+              <Link href="/procurements">Procurements</Link>
+            </CommandItem>
+            <CommandItem>
+              <Folders className="mr-2 h-4 w-4" />
+              <Link href="/staffReports">Staff Reports</Link>
+            </CommandItem>
+            <CommandItem>
+              <Folders className="mr-2 h-4 w-4" />
+              <Link href="/reviews">Reviews</Link>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />

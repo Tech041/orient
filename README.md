@@ -1,8 +1,7 @@
-# TraversyPress UI
+# Orient, a hospital management system admin dashboard built with powerful components architecture of almighty React.
 
-<img src="img/screen.png" alt="" />
-
-This is a admin dashboard UI built with Next.js. It is only the front-end interface so we are just using files for the data. Feel free to add on to it and make it a full stack project.
+This is a admin dashboard of a hospital management system. Built with Next.js,Typescript and tailwind css.
+All data is fetched from dummyjson API.
 
 ### Packages Used
 

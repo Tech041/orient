@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import PostsPagination from "./posts/PostsPagination";
 
 const invoices = [
   {
@@ -83,13 +84,16 @@ const DashboardTable = () => {
             </TableRow>
           ))}
         </TableBody>
-        <TableFooter>
+        {/* <TableFooter>
           <TableRow>
             <TableCell colSpan={3}>Total</TableCell>
             <TableCell className="text-right">$2,500.00</TableCell>
           </TableRow>
-        </TableFooter>
+        </TableFooter> */}
       </Table>
+      <div className="">
+        <PostsPagination/>
+      </div>
     </div>
   );
 };

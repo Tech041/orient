@@ -13,7 +13,7 @@ const PostsPagination = () => {
     <Pagination>
       <PaginationContent>
         <PaginationItem>
-          <PaginationPrevious href='#' />
+          <PaginationPrevious href='#' className='text-blue-600' />
         </PaginationItem>
         <PaginationItem>
           <PaginationLink href='#'>1</PaginationLink>
@@ -28,7 +28,7 @@ const PostsPagination = () => {
           <PaginationEllipsis />
         </PaginationItem>
         <PaginationItem>
-          <PaginationNext href='#' />
+          <PaginationNext href='#' className='text-orange-500' />
         </PaginationItem>
       </PaginationContent>
     </Pagination>

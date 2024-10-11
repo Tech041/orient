@@ -8,10 +8,11 @@ import { GrSchedules } from "react-icons/gr";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import Appointment from "@/components/posts/Appointment";
 import Link from "next/link";
+import GeneralIndicator from "@/components/dashboard/GeneralIndicator";
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-scroll overflow-x-hidden">
+    <div className="h-auto">
       <div className="flex flex-col lg:flex-row justify-evenly gap-5 mb-5 ">
         <DashboardCard
           title="Patients"
@@ -35,6 +36,7 @@ export default function Home() {
       <AnalyticsChart />
       <DashboardTable />
       <Appointment />
+      <GeneralIndicator/>
     </div>
   );
 }
