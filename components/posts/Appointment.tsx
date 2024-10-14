@@ -82,7 +82,7 @@ const Appointment = () => {
       </h1>
       <Table >
         <TableCaption>Appointments</TableCaption>
-        <TableHeader className="bg-gray-200">
+        <TableHeader className="bg-gray-200 w-[100%]">
           <TableRow>
             <TableHead className="font-bold text-black">
               Patient Name
@@ -91,7 +91,7 @@ const Appointment = () => {
             <TableHead className="w-[100px] text-black ">
               Department
             </TableHead>
-            <TableHead className="text-black hidden">Date Admitted</TableHead>
+            <TableHead className="text-black ">Date Admitted</TableHead>
             <TableHead className="text-black">Medical Status</TableHead>
             <TableHead className="text-right text-black  ">
               Medical Bill
