@@ -1,12 +1,12 @@
 import BackButton from "@/components/BackButton";
 import React from "react";
-import { expense } from "@/data/expense";
+import { revenue } from "@/data/revenue";
 import PostsPagination from "@/components/posts/PostsPagination";
 import Link from "next/link";
 
 const accordionStyles = "flex  justify-between gap-10 py-2 border-2 px-6 ";
 const thStyles = "flex-1 text-start";
-const Expenditure = () => {
+const Revenue = () => {
   return (
     <section className="">
       <div className="">
@@ -16,7 +16,7 @@ const Expenditure = () => {
         <table>
           <thead>
             <tr className={accordionStyles}>
-              <th className={thStyles}>Expenditure</th>
+              <th className={thStyles}>Department</th>
               <th className={`${{ thStyles }}   hidden md:block`}>
                 1st quarter
               </th>
@@ -27,11 +27,11 @@ const Expenditure = () => {
             </tr>
           </thead>
           <tbody>
-            {expense.map((exp) => (
+            {revenue.map((exp) => (
               <tr key={exp.id} className={accordionStyles}>
-                <td className="flex-1 capitalize">{exp.type}</td>
+                <td className="flex-1 capitalize">{exp.department}</td>
                 <td className="flex-1 capitalize hidden md:block">
-                  ${exp.first}
+                  $ {exp.first}
                 </td>
                 <td className="flex-1 capitalize hidden md:block">
                   ${exp.second}
@@ -54,7 +54,7 @@ const Expenditure = () => {
         <PostsPagination />
       </div>
       <div className="flex justify-center py-5">
-        <Link href="/charts" className="text-orange-600 font-semibold">
+        <Link href="/income" className="text-orange-600 font-semibold">
           View chart
         </Link>
       </div>
@@ -62,4 +62,4 @@ const Expenditure = () => {
   );
 };
 
-export default Expenditure;
+export default Revenue;

@@ -14,29 +14,33 @@ export default function Home() {
   return (
     <div className="h-auto">
       <div className="flex flex-col lg:flex-row justify-evenly gap-5 mb-5 ">
-        <DashboardCard
-          title="Patients"
-          count={1030}
-          icon={<IoPerson className="text-white" size={40} />}
-        />
-        <Link href="/appointment">
-          {" "}
+        <Link href="/doctors">
           <DashboardCard
-            title="Appointments"
-            count={322}
-            icon={<GrSchedules className="text-white" size={40} />}
+            title="Active Doctors"
+            // count={103}
+            // icon={<IoPerson className="text-white" size={40} />}
           />
         </Link>
-        <DashboardCard
-          title="Revenue"
-          count={75000}
-          icon={<MdOutlineAttachMoney className="text-white" size={40} />}
-        />
+        <Link href="/patients">
+          {" "}
+          <DashboardCard
+            title="Total Patients"
+            // count={32}
+            // icon={<GrSchedules className="text-white" size={40} />}
+          />
+        </Link>
+        <Link href="/expenditure">
+          <DashboardCard
+            title="Expenditure"
+            // count={7000}
+            // icon={<MdOutlineAttachMoney className="text-white" size={40} />}
+          />
+        </Link>
       </div>
       <AnalyticsChart />
       <DashboardTable />
       <Appointment />
-      <GeneralIndicator/>
+      <GeneralIndicator />
     </div>
   );
 }

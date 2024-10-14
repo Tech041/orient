@@ -9,7 +9,6 @@ import {
 const accordionStyles = "flex  justify-between gap-10 py-2 border-2 px-6 ";
 const commentStyles = "flex-1 hidden md:block";
 const thStyles = "flex-1 text-start";
-("flex-1 text-start");
 
 const GeneralIndicator = () => {
   return (

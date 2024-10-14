@@ -7,7 +7,6 @@ import {
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -16,51 +15,46 @@ import PostsPagination from "@/components/posts/PostsPagination";
 
 interface ReviewProp {
   id: number;
-  postId: number;
+  title: string;
   body: string;
-  likes: number;
 }
-const Reviews = () => {
-  const [review, setReview] = useState<ReviewProp[]>([]);
+const Staff = () => {
+  const [staff, setStaff] = useState<ReviewProp[]>([]);
 
   useEffect(() => {
-    const fetchReviews = async () => {
+    const fetchStaff = async () => {
       try {
-        const response = await axios.get("https://dummyjson.com/comments");
-        const { comments } = response.data;
-        console.log(comments);
-        setReview(comments);
+        const response = await axios.get("https://dummyjson.com/posts");
+        const { posts } = response.data;
+        console.log(posts);
+        setStaff(posts);
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
     };
 
-    fetchReviews();
+    fetchStaff();
   }, []);
 
   return (
     <div className="p-5">
-      <h1 className="text-3xl font-bold mb-5">All Reviews</h1>
+      <h1 className="text-3xl font-bold mb-5">Staff Report</h1>
 
       <Table>
-        <TableCaption>Comment Page</TableCaption>
+        <TableCaption>Staff Report Page</TableCaption>
         <TableHeader className="bg-gray-200">
           <TableRow>
-            <TableHead className="text-orange-500">Comment ID</TableHead>
+            <TableHead className="text-orange-500">Title</TableHead>
 
-            <TableHead className="">Comment</TableHead>
-
-            <TableHead className="">Likes</TableHead>
+            <TableHead className="">Report</TableHead>
           </TableRow>
         </TableHeader>
 
         <TableBody>
-          {review?.map((p) => (
+          {staff?.map((p) => (
             <TableRow key={p.id}>
-              <TableCell>{p.postId}</TableCell>
+              <TableCell>{p.title}</TableCell>
               <TableCell>{p.body}</TableCell>
-
-              <TableCell>{p.likes}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -79,4 +73,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default Staff;

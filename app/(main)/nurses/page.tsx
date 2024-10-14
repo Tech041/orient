@@ -14,53 +14,59 @@ import {
 } from "@/components/ui/table";
 import PostsPagination from "@/components/posts/PostsPagination";
 
-interface ReviewProp {
+interface NursesProp {
   id: number;
-  postId: number;
-  body: string;
-  likes: number;
+  lastName: string;
+
+  gender: string;
+
+  email: string;
+  university: string;
 }
-const Reviews = () => {
-  const [review, setReview] = useState<ReviewProp[]>([]);
+const Nurses = () => {
+  const [nurses, setNurses] = useState<NursesProp[]>([]);
 
   useEffect(() => {
-    const fetchReviews = async () => {
+    const fetchNurses = async () => {
       try {
-        const response = await axios.get("https://dummyjson.com/comments");
-        const { comments } = response.data;
-        console.log(comments);
-        setReview(comments);
+        const response = await axios.get("https://dummyjson.com/users");
+        const { users } = response.data;
+        console.log(users);
+        setNurses(users);
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
     };
 
-    fetchReviews();
+    fetchNurses();
   }, []);
 
   return (
     <div className="p-5">
-      <h1 className="text-3xl font-bold mb-5">All Reviews</h1>
+      <h1 className="text-3xl font-bold mb-5">All Nurses</h1>
 
       <Table>
-        <TableCaption>Comment Page</TableCaption>
+        <TableCaption>Nurses Page</TableCaption>
         <TableHeader className="bg-gray-200">
           <TableRow>
-            <TableHead className="text-orange-500">Comment ID</TableHead>
+            <TableHead className="text-orange-500">Last Name</TableHead>
 
-            <TableHead className="">Comment</TableHead>
+            <TableHead className="">Gender</TableHead>
 
-            <TableHead className="">Likes</TableHead>
+            <TableHead className="">Email</TableHead>
+            <TableHead className="">Graduated from</TableHead>
           </TableRow>
         </TableHeader>
 
         <TableBody>
-          {review?.map((p) => (
+          {nurses?.map((p) => (
             <TableRow key={p.id}>
-              <TableCell>{p.postId}</TableCell>
-              <TableCell>{p.body}</TableCell>
+              <TableCell>{p.lastName}</TableCell>
 
-              <TableCell>{p.likes}</TableCell>
+              <TableCell>{p.gender}</TableCell>
+
+              <TableCell className="">{p.email}</TableCell>
+              <TableCell className="">{p.university}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -79,4 +85,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default Nurses;

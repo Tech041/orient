@@ -37,15 +37,15 @@ const Sidebar = () => {
             </CommandItem>
             <CommandItem>
               <Folders className="mr-2 h-4 w-4" />
-              <Link href="/activeDoctors">Doctors</Link>
+              <Link href="/doctors">Doctors</Link>
             </CommandItem>
             <CommandItem>
               <Folders className="mr-2 h-4 w-4" />
-              <Link href="/activePharmacists">Pharmacists</Link>
+              <Link href="/pharmacists">Pharmacists</Link>
             </CommandItem>
             <CommandItem>
               <Folders className="mr-2 h-4 w-4" />
-              <Link href="/activeNurses">Nurses</Link>
+              <Link href="/nurses">Nurses</Link>
             </CommandItem>
             <CommandItem>
               <Folders className="mr-2 h-4 w-4" />
@@ -53,11 +53,11 @@ const Sidebar = () => {
             </CommandItem>
             <CommandItem>
               <Folders className="mr-2 h-4 w-4" />
-              <Link href="/procurements">Procurements</Link>
+              <Link href="/revenue">Revenue</Link>
             </CommandItem>
             <CommandItem>
               <Folders className="mr-2 h-4 w-4" />
-              <Link href="/staffReports">Staff Reports</Link>
+              <Link href="/staff">Staff Reports</Link>
             </CommandItem>
             <CommandItem>
               <Folders className="mr-2 h-4 w-4" />

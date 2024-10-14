@@ -84,16 +84,16 @@ const Appointment = () => {
         <TableCaption>Appointments</TableCaption>
         <TableHeader className="bg-gray-200">
           <TableRow>
-            <TableHead className="font-bold text-green-600">
+            <TableHead className="font-bold text-black">
               Patient Name
             </TableHead>
 
-            <TableHead className="w-[100px] text-purple-800">
+            <TableHead className="w-[100px] text-black ">
               Department
             </TableHead>
-            <TableHead className="text-orange-500">Date Admitted</TableHead>
-            <TableHead className="text-blue-500">Medical Status</TableHead>
-            <TableHead className="text-right  text-yellow-700 ">
+            <TableHead className="text-black hidden">Date Admitted</TableHead>
+            <TableHead className="text-black">Medical Status</TableHead>
+            <TableHead className="text-right text-black  ">
               Medical Bill
             </TableHead>
           </TableRow>
