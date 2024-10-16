@@ -13,6 +13,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import PostsPagination from "@/components/posts/PostsPagination";
+import BackButton from "@/components/BackButton";
 
 interface PatientProp {
   id: number;
@@ -44,6 +45,9 @@ const Pharmacists = () => {
 
   return (
     <div className="p-5">
+      <div className="">
+        <BackButton text="Back" link="/"/>
+      </div>
       <h1 className="text-3xl font-bold mb-5">All Pharmacists</h1>
 
       <Table>

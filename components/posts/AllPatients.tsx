@@ -42,7 +42,7 @@ const Posts = () => {
 
   return (
     <div className="p-5">
-      <h1 className="text-3xl font-bold mb-5">All Patients</h1>
+      <h1 className="text-3xl font-bold mb-5">Admitted Patients</h1>
 
       <Table>
         <TableCaption>Appointments</TableCaption>

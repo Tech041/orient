@@ -13,6 +13,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import PostsPagination from "@/components/posts/PostsPagination";
+import BackButton from "@/components/BackButton";
 
 interface ReviewProp {
   id: number;
@@ -40,6 +41,9 @@ const Reviews = () => {
 
   return (
     <div className="p-5">
+       <div className="">
+        <BackButton text="Back" link="/"/>
+      </div>
       <h1 className="text-3xl font-bold mb-5">All Reviews</h1>
 
       <Table>

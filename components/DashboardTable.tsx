@@ -25,7 +25,7 @@ const invoices = [
   },
   {
     invoice: "003",
-    paymentStatus: "Unpaid",
+    paymentStatus: "pending",
     totalAmount: "$350.00",
     paymentMethod: "Bank Transfer",
   },
@@ -49,20 +49,19 @@ const invoices = [
   },
   {
     invoice: "007",
-    paymentStatus: "Unpaid",
+    paymentStatus: "paid",
     totalAmount: "$300.00",
     paymentMethod: "Credit Card",
   },
 ];
 
-
 const DashboardTable = () => {
-
-
   return (
     <div className="">
-      <h1 className="text-2xl text-center py-5 font-bold">Most recent transactions</h1>
-      <Table >
+      <h1 className="text-2xl text-center py-5 font-bold">
+        Recent transactions
+      </h1>
+      <Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader className="bg-gray-200">
           <TableRow>
@@ -76,7 +75,7 @@ const DashboardTable = () => {
           {invoices.map((invoice) => (
             <TableRow key={invoice.invoice}>
               <TableCell className="font-medium">{invoice.invoice}</TableCell>
-              <TableCell >{invoice.paymentStatus}</TableCell>
+              <TableCell>{invoice.paymentStatus}</TableCell>
               <TableCell>{invoice.paymentMethod}</TableCell>
               <TableCell className="text-right">
                 {invoice.totalAmount}
@@ -92,7 +91,7 @@ const DashboardTable = () => {
         </TableFooter> */}
       </Table>
       <div className="">
-        <PostsPagination/>
+        <PostsPagination />
       </div>
     </div>
   );

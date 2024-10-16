@@ -77,20 +77,14 @@ const invoices = [
 const Appointment = () => {
   return (
     <div className="">
-      <h1 className="text-2xl text-center font-bold py-5">
-        Latest Appointments
-      </h1>
-      <Table >
-        <TableCaption>Appointments</TableCaption>
+      <h1 className="text-2xl text-center font-bold py-5">Latest Admissions</h1>
+      <Table>
+        <TableCaption>Admissions</TableCaption>
         <TableHeader className="bg-gray-200 w-[100%]">
           <TableRow>
-            <TableHead className="font-bold text-black">
-              Patient Name
-            </TableHead>
+            <TableHead className="font-bold text-black">Patient Name</TableHead>
 
-            <TableHead className="w-[100px] text-black ">
-              Department
-            </TableHead>
+            <TableHead className="w-[100px] text-black ">Department</TableHead>
             <TableHead className="text-black ">Date Admitted</TableHead>
             <TableHead className="text-black">Medical Status</TableHead>
             <TableHead className="text-right text-black  ">
@@ -120,7 +114,7 @@ const Appointment = () => {
         </TableFooter> */}
       </Table>
       <div className="">
-        <PostsPagination/>
+        <PostsPagination />
       </div>
     </div>
   );
