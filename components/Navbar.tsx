@@ -62,7 +62,7 @@ const Navbar = () => {
             </div>
             <nav
               className={`w-full  h-screen  absolute  top-0  bg-gray-300   transition-all duration-300 ease-in ${
-                open ? "top-0" : "top-[-1200%]"
+                open ? "top-0" : "top-[-2000%]"
               }`}
             >
               <ul

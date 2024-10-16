@@ -12,7 +12,7 @@ import GeneralIndicator from "@/components/dashboard/GeneralIndicator";
 
 export default function Home() {
   return (
-    <div className="h-auto">
+    <div className="h-auto mt-10">
       <div className="flex flex-col lg:flex-row justify-evenly gap-5 mb-5 ">
         <Link href="/doctors">
           <DashboardCard

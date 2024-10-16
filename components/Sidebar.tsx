@@ -23,7 +23,7 @@ const Sidebar = () => {
   return (
     <div className="  h-screen mt-5">
       <Command className=" rounded-none">
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder="Type a command..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
