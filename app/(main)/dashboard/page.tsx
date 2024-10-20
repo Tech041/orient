@@ -18,14 +18,14 @@ export default function Home() {
         <h2 className="py-2 px-4 text-green-400 text-2xl font-semibold">Welcome, Admin</h2>
         <h3 className=" text-orange-500 px-4 pb-3">Start with remaining appointments</h3>
         <div className="flex flex-col lg:flex-row justify-evenly gap-5 mb-5 ">
-          <Link href="/doctors">
+          <Link href="#">
             <DashboardCard
               title="Scheduled appointments"
               count={103}
               // icon={<IoPerson className="text-white" size={40} />}
             />
           </Link>
-          <Link href="/patients">
+          <Link href="#">
             {" "}
             <DashboardCard
               title="Pending appointments"
@@ -33,7 +33,7 @@ export default function Home() {
               // icon={<GrSchedules className="text-white" size={40} />}
             />
           </Link>
-          <Link href="/expenditure">
+          <Link href="#">
             <DashboardCard
               title="Cancelled appointments"
               count={7000}
