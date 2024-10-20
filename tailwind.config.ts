@@ -17,6 +17,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "landing-image": "url('/landingImage.jpg')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -17,7 +17,8 @@ const invoices = [
     department: "Obstetrics",
     date: "23/4/2024",
     status: "stable",
-    bill: "$ 300",
+    name: "Dr Bright",
+    appointment: "scheduled",
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ const invoices = [
     department: "Orthopedic",
     date: "8/5/2024",
     status: "critical",
-    bill: "$ 200",
+    name: "Dr Huggson",
+    appointment: "pending",
   },
   {
     id: 3,
@@ -34,7 +36,8 @@ const invoices = [
     department: "Emergency",
     date: "23/6/2024",
     status: "severe",
-    bill: "$ 1300",
+    name: "Dr Brian",
+    appointment: "scheduled",
   },
   {
     id: 4,
@@ -43,7 +46,8 @@ const invoices = [
     department: "Paediatrics",
     date: "30/6/2024",
     status: "chronic",
-    bill: "$600",
+    name: "Dr Gregg",
+    appointment: "scheduled",
   },
   {
     id: 5,
@@ -52,7 +56,8 @@ const invoices = [
     department: "Urology",
     date: "1/7/2024",
     status: "terminal",
-    bill: "$ 1000",
+    name: "Dr Hills",
+    appointment: "scheduled",
   },
   {
     id: 6,
@@ -61,7 +66,8 @@ const invoices = [
     department: "Psychiatry",
     date: "12/7/2024",
     status: "unstable",
-    bill: "$ 600",
+    name: "Dr Stan",
+    appointment: "pending",
   },
   {
     id: 7,
@@ -70,7 +76,8 @@ const invoices = [
     department: "Emergency",
     date: "23/7/2024",
     status: "stable",
-    bill: "$ 500",
+    name: "Dr Mullar",
+    appointment: "scheduled",
   },
 ];
 
@@ -87,9 +94,9 @@ const Appointment = () => {
             <TableHead className="w-[100px] text-black ">Department</TableHead>
             <TableHead className="text-black ">Date Admitted</TableHead>
             <TableHead className="text-black">Medical Status</TableHead>
-            <TableHead className="text-right text-black  ">
-              Medical Bill
-            </TableHead>
+            <TableHead className="text-black">Doctor</TableHead>
+
+            <TableHead className="text-right text-black  ">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -102,7 +109,11 @@ const Appointment = () => {
               </TableCell>
               <TableCell>{invoice.date}</TableCell>
               <TableCell>{invoice.status}</TableCell>
-              <TableCell className="text-right">{invoice.bill}</TableCell>
+              <TableCell>{invoice.name}</TableCell>
+
+              <TableCell className="text-right">
+                {invoice.appointment}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
