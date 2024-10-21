@@ -25,7 +25,7 @@ const Navbar = () => {
           {" "}
           <Link
             className="text-white font-bold text-xl flex  justify-center items-center"
-            href="/"
+            href="/dashboard"
           >
             {/* <Image src="/logo.png" alt="TraversyPress" height={40} width={40} />? */}
             <h1 className={liStyle}> Orient</h1>
