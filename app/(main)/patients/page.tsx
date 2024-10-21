@@ -5,7 +5,7 @@ import AllPatients from "@/components/posts/AllPatients";
 const Appointment = () => {
   return (
     <div className="h-auto">
-      <BackButton text=" Back" link="/" />
+      <BackButton text=" Back" link="/dashboard" />
       <AllPatients />
       <PostsPagination />
     </div>

@@ -43,7 +43,7 @@ const Doctors = () => {
 
   return (
     <div className="p-5">
-      <BackButton text="Back" link="/" />
+      <BackButton text="Back" link="/dashboard" />
       <h1 className="text-3xl font-bold mb-5">All Doctors</h1>
       <Table>
         <TableCaption>Doctors Page</TableCaption>

@@ -9,8 +9,8 @@ const thStyles = "flex-1 text-start";
 const Revenue = () => {
   return (
     <section className="">
-      <div className="">
-        <BackButton text="Back" link="/" />
+      <div className=" py-5">
+        <BackButton text="Back" link="/dashboard" />
       </div>
       <div className="flex justify-center ">
         <table>

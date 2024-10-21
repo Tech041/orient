@@ -45,7 +45,7 @@ const Nurses = () => {
   return (
     <div className="p-5">
        <div className="">
-        <BackButton text="Back" link="/"/>
+        <BackButton text="Back" link="/dashboard"/>
       </div>
       <h1 className="text-3xl font-bold mb-5">All Nurses</h1>
 
