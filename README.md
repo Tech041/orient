@@ -1,9 +1,9 @@
-# Orient, a hospital management system admin dashboard built with powerful components architecture of almighty React.
+Orient, a hospital management system admin dashboard built with powerful components architecture of almighty React.
 
 This is a admin dashboard of a hospital management system. Built with Next.js,Typescript and tailwind css.
 All data is fetched from dummyjson API.
 
-### Packages Used
+ Packages Used
 
 - Next.js/React
 - TypeScript
@@ -15,8 +15,8 @@ All data is fetched from dummyjson API.
 - Zod
 - Next Themes
 
-## Getting Started
-
+ Getting Started
+clone the repo
 Install dependencies:
 
 ```bash
